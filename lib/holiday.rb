@@ -50,9 +50,13 @@ end
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season
 
+  arr1 = []
+
   holiday_hash.collect do |season, holiday|
-    season.values
-  end 
+   arr1.push(holiday.values)
+  end
+
+  arr1.flatten.uniq
   
 end
 
@@ -64,6 +68,8 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
+  
+  
 
 end
 
